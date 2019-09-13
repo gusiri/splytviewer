@@ -107,7 +107,13 @@ class Chain extends Component {
       'chain',
       squeezed && 'chain--squeezed',
       options.contractCalls && 'chain--contract-calls',
-      options.contractCreates && 'chain--contract-creates'
+      options.contractCreates && 'chain--contract-creates',
+      options.stakeManager && 'chain--contract-stakeManager',
+      options.assetManager && 'chain--contract-assetManager',
+      options.orderManager && 'chain--contract-orderManager',
+      options.arbitrationManager && 'chain--contract-arbitrationManager',
+      options.reputationManager && 'chain--contract-reputationManager'
+
     ]
       .filter(Boolean)
       .join(' ');
