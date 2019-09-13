@@ -37,12 +37,44 @@
   }
 }
 
-.chain--contract-creates {
-  .transaction.transaction--create {
-    background-color: $transaction-contract-create !important;
+.chain--contract-stakeManager {
+  .transaction.transaction--stakeManager {
+    background-color: $transaction-contract-stakeManager !important;
   }
 }
 
-.chain--decentraland .transaction.transaction--to {
-  background-color: #E68346 !important;
+
+.chain--contract-splytManager {
+  .transaction.transaction--splytManager {
+    background-color: $transaction-contract-splytManager !important;
+  }
 }
+
+.chain--contract-assetManager {
+  .transaction.transaction--assetManager {
+    background-color: $transaction-contract-assetManager !important;
+  }
+}
+
+.chain--contract-orderManager {
+  .transaction.transaction--orderManager {
+    background-color: $transaction-contract-orderManager !important;
+  }
+}
+
+
+
+.chain--contract-arbitrationManager {
+  .transaction.transaction--arbitrationManager {
+    background-color: $transaction-contract-arbitrationManager !important;
+  }
+}
+
+
+.chain--contract-reputationManager {
+  .transaction.transaction--reputationManager {
+    background-color: $transaction-contract-reputationManager !important;
+  }
+}
+
+
