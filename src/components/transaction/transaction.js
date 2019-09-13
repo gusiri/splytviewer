@@ -1,7 +1,8 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
 import './transaction.css';
 import {gweiToEther} from '../../helper';
-import {TX_BLACK_ETHER} from '../../config';
+import {TX_BLACK_ETHER, STAKE_MANAGER, SPLYT_MANAGER, ASSET_MANAGER, ORDER_MANAGER, ARBITRATION_MANAGER, REPUTATION_MANAGER} from '../../config';
+
 
 export default ({
   data,
@@ -28,10 +29,24 @@ export default ({
     color = toColor;
   }
 
+
+// splyt contract address for each manager
   const classes = [
     'transaction',
-    hasInput && 'transaction--input',
-    !to && 'transaction--create'
+    (	from === STAKE_MANAGER || to === STAKE_MANAGER ||
+	from === SPLYT_MANAGER || to === SPLYT_MANAGER ||
+	from === ASSET_MANAGER || to === ASSET_MANAGER ||
+	from === ORDER_MANAGER || to === ORDER_MANAGER ||
+	from === ARBITRATION_MANAGER || to === ARBITRATION_MANAGER ||
+	from === REPUTATION_MANAGER  || to === REPUTATION_MANAGER) && 'transaction--input',
+
+
+    (from === STAKE_MANAGER || to === STAKE_MANAGER) && 'transaction--stakeManager',
+    (from === SPLYT_MANAGER || to === SPLYT_MANAGER) && 'transaction--splytManager',
+    (from === ASSET_MANAGER || to === ASSET_MANAGER) && 'transaction--assetManager',
+    (from === ORDER_MANAGER || to === ORDER_MANAGER) && 'transaction--orderManager',
+    (from === ARBITRATION_MANAGER || to === ARBITRATION_MANAGER) && 'transaction--arbitrationManager',
+    (from === REPUTATION_MANAGER  || to === REPUTATION_MANAGER ) && 'transaction--reputationManager'
   ]
     .filter(Boolean)
     .join(' ');
