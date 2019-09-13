@@ -13,9 +13,55 @@
     }
   }
 
-  &--creations.is-checked {
+  &--stakeManager.is-checked {
     .mdl-switch__thumb {
-      background-color: $transaction-contract-create;
+      background-color: $transaction-contract-stakeManager;
     }
   }
+
+  &--splytManager.is-checked {
+    .mdl-switch__thumb {
+      background-color: $transaction-contract-splytManager;
+    }
+  }
+
+
+  &--assetManager.is-checked {
+    .mdl-switch__thumb {
+      background-color: $transaction-contract-assetManager;
+    }
+  }
+
+
+
+  &--orderManager.is-checked {
+    .mdl-switch__thumb {
+      background-color: $transaction-contract-orderManager;
+    }
+  }
+
+
+
+  &--arbitrationManager.is-checked {
+    .mdl-switch__thumb {
+      background-color: $transaction-contract-arbitrationManager;
+    }
+  }
+
+
+
+  &--reputationManager.is-checked {
+    .mdl-switch__thumb {
+      background-color: $transaction-contract-reputationManager;
+    }
+  }
+
+
+
+
+
+
+
+
+
 }
