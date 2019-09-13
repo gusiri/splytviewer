@@ -28,7 +28,12 @@ export default class Menu extends Component {
     const {onToggle, options} = this.props;
     const {
       contractCalls,
-      contractCreates,
+	stakeManager,
+	splytManager,
+	assetManager,
+	orderManager,
+	arbitrationManager,
+	reputationManager,
       sortOrder
     } = options;
     const classes = `menu ${menu ? 'menu--open' : ''}`;
@@ -43,21 +48,70 @@ export default class Menu extends Component {
           }}
         />
         <div className="menu__content">
-          <div className="menu-heading">Highlight</div>
+          <div className="menu-heading">Splyt Transaction Viewer</div>
+
 
           <Toggle
-            label="Contract Executions"
+            label="All Splyt Transactions"
             cssClasses="mdl-switch--calls"
             checked={contractCalls}
             onChange={() => this.setOption({contractCalls: !contractCalls})}
-          />
+        
+           />
+
+
 
           <Toggle
-            label="Contract Creations"
-            cssClasses="mdl-switch--creations"
-            checked={contractCreates}
-            onChange={() => this.setOption({contractCreates: !contractCreates})}
+            label="Stake Manager"
+            cssClasses="mdl-switch--stakeManager"
+            checked={stakeManager}
+            onChange={() => this.setOption({stakeManager: !stakeManager})}
+        
+           />
+
+ 
+          <Toggle
+            label="Splyt Manager"
+            cssClasses="mdl-switch--splytManager"
+            checked={splytManager}
+            onChange={() => this.setOption({splytManager: !splytManager})}
+        
+           />
+
+         <Toggle
+            label="Asset Manager"
+            cssClasses="mdl-switch--assetManager"
+            checked={assetManager}
+            onChange={() => this.setOption({assetManager: !assetManager})}
+        
+           />
+
+
+          <Toggle
+            label="Order Manager"
+            cssClasses="mdl-switch--orderManager"
+            checked={orderManager}
+            onChange={() => this.setOption({orderManager: !orderManager})}
           />
+
+
+          <Toggle
+            label="Arbitration Manager"
+            cssClasses="mdl-switch--arbitrationManager"
+            checked={arbitrationManager}
+            onChange={() => this.setOption({arbitrationManager: !arbitrationManager})}
+          />
+
+
+          <Toggle
+            label="Reputation Manager"
+            cssClasses="mdl-switch--reputationManager"
+            checked={reputationManager}
+            onChange={() => this.setOption({reputationManager: !reputationManager})}
+	  />
+
+
+
 
           <ExampleSelect placeholder="From"
             examples={FROM_EXAMPLES}
@@ -94,22 +148,21 @@ export default class Menu extends Component {
         </div>
         <footer>
           {
-            // <div>made by <a href="test">@phil_osophie</a> - open source on <a href="cdf">github</a></div>
           }
           <div className="logos">
-            <a href="https://twitter.com/phil_osophie" className="twitter" />
+            <a href="https://twitter.com/splytcore" className="twitter" />
             <a
-              href="https://github.com/pwambach/ethereum-visualization"
+              href="https://github.com/splytcore"
               className="github"
             />
           </div>
 
           <br />
           <div className="attributions">
-            Donations: <br />ETH 0x33fC520429f355A1348fEF631136C9C22d0e764c
+            
             <br />
             <br />
-            Powered by <a href="https://etherscan.io">Etherscan.io</a> APIs
+            Powered by <a href="https://www.spl.yt">Splytcore.com</a>
           </div>
         </footer>
       </div>
