@@ -1,4 +1,4 @@
-export const API_URL = 'http://141.223.82.133:8000/blocks';
+export const API_URL = 'http://3.18.35.175:8000/blocks';
 export const REFRESH_TIME = 100 * 10;
 export const TX_BLACK_ETHER = 20;
 export const CHAIN_MARGIN_TOP = 20;
