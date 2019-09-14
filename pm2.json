@@ -1,0 +1,12 @@
+{
+  "apps" : [{
+    "name"        : "Block Listener",
+    "script"      : "npm start blockListener",
+    "watch"       : true
+  }, {
+   "name"         : "Splyt Viewer",
+   "script"       : "npm start",
+   "watch"        : true
+  }]
+}
+
